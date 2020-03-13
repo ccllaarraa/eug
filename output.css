@@ -1,0 +1,629 @@
+body {
+  background-color: lightblue;
+}
+
+@keyframes wave {
+  from {
+    transform: translateY(0);
+    color: white;
+  }
+  to {
+    transform: translateY(-90px);
+  }
+}
+.wavetext, .wavetext2, .wavetext3 {
+  margin-top: 10em;
+  text-align: center;
+}
+
+.wavetext span, .wavetext2 span, .wavetext3 span {
+  display: inline-block;
+  font-family: "Helvetica", sans-serif;
+  font-size: 15px;
+  animation-duration: 4s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.wavetext :nth-child(40n+0) {
+  animation-delay: -8s;
+  color: #0a640a;
+}
+
+.wavetext2 :nth-child(40n+0) {
+  animation-delay: -8s;
+  color: #0a640a;
+}
+
+.wavetext3 :nth-child(40n+0) {
+  animation-delay: -8s;
+  color: #0a640a;
+}
+
+.wavetext :nth-child(40n+1) {
+  animation-delay: -7.8s;
+  color: #1e6432;
+}
+
+.wavetext2 :nth-child(40n+1) {
+  animation-delay: -7.8s;
+  color: #1e6432;
+}
+
+.wavetext3 :nth-child(40n+1) {
+  animation-delay: -7.8s;
+  color: #1e6432;
+}
+
+.wavetext :nth-child(40n+2) {
+  animation-delay: -7.6s;
+  color: #326423;
+}
+
+.wavetext2 :nth-child(40n+2) {
+  animation-delay: -7.6s;
+  color: #326423;
+}
+
+.wavetext3 :nth-child(40n+2) {
+  animation-delay: -7.6s;
+  color: #326423;
+}
+
+.wavetext :nth-child(40n+3) {
+  animation-delay: -7.4s;
+  color: #466414;
+}
+
+.wavetext2 :nth-child(40n+3) {
+  animation-delay: -7.4s;
+  color: #466414;
+}
+
+.wavetext3 :nth-child(40n+3) {
+  animation-delay: -7.4s;
+  color: #466414;
+}
+
+.wavetext :nth-child(40n+4) {
+  animation-delay: -7.2s;
+  color: #5a643c;
+}
+
+.wavetext2 :nth-child(40n+4) {
+  animation-delay: -7.2s;
+  color: #5a643c;
+}
+
+.wavetext3 :nth-child(40n+4) {
+  animation-delay: -7.2s;
+  color: #5a643c;
+}
+
+.wavetext :nth-child(40n+5) {
+  animation-delay: -7s;
+  color: #6e642d;
+}
+
+.wavetext2 :nth-child(40n+5) {
+  animation-delay: -7s;
+  color: #6e642d;
+}
+
+.wavetext3 :nth-child(40n+5) {
+  animation-delay: -7s;
+  color: #6e642d;
+}
+
+.wavetext :nth-child(40n+6) {
+  animation-delay: -6.8s;
+  color: #82641e;
+}
+
+.wavetext2 :nth-child(40n+6) {
+  animation-delay: -6.8s;
+  color: #82641e;
+}
+
+.wavetext3 :nth-child(40n+6) {
+  animation-delay: -6.8s;
+  color: #82641e;
+}
+
+.wavetext :nth-child(40n+7) {
+  animation-delay: -6.6s;
+  color: #96640f;
+}
+
+.wavetext2 :nth-child(40n+7) {
+  animation-delay: -6.6s;
+  color: #96640f;
+}
+
+.wavetext3 :nth-child(40n+7) {
+  animation-delay: -6.6s;
+  color: #96640f;
+}
+
+.wavetext :nth-child(40n+8) {
+  animation-delay: -6.4s;
+  color: #0f6437;
+}
+
+.wavetext2 :nth-child(40n+8) {
+  animation-delay: -6.4s;
+  color: #0f6437;
+}
+
+.wavetext3 :nth-child(40n+8) {
+  animation-delay: -6.4s;
+  color: #0f6437;
+}
+
+.wavetext :nth-child(40n+9) {
+  animation-delay: -6.2s;
+  color: #236428;
+}
+
+.wavetext2 :nth-child(40n+9) {
+  animation-delay: -6.2s;
+  color: #236428;
+}
+
+.wavetext3 :nth-child(40n+9) {
+  animation-delay: -6.2s;
+  color: #236428;
+}
+
+.wavetext :nth-child(40n+10) {
+  animation-delay: -6s;
+  color: #376419;
+}
+
+.wavetext2 :nth-child(40n+10) {
+  animation-delay: -6s;
+  color: #376419;
+}
+
+.wavetext3 :nth-child(40n+10) {
+  animation-delay: -6s;
+  color: #376419;
+}
+
+.wavetext :nth-child(40n+11) {
+  animation-delay: -5.8s;
+  color: #4b640a;
+}
+
+.wavetext2 :nth-child(40n+11) {
+  animation-delay: -5.8s;
+  color: #4b640a;
+}
+
+.wavetext3 :nth-child(40n+11) {
+  animation-delay: -5.8s;
+  color: #4b640a;
+}
+
+.wavetext :nth-child(40n+12) {
+  animation-delay: -5.6s;
+  color: #5f6432;
+}
+
+.wavetext2 :nth-child(40n+12) {
+  animation-delay: -5.6s;
+  color: #5f6432;
+}
+
+.wavetext3 :nth-child(40n+12) {
+  animation-delay: -5.6s;
+  color: #5f6432;
+}
+
+.wavetext :nth-child(40n+13) {
+  animation-delay: -5.4s;
+  color: #736423;
+}
+
+.wavetext2 :nth-child(40n+13) {
+  animation-delay: -5.4s;
+  color: #736423;
+}
+
+.wavetext3 :nth-child(40n+13) {
+  animation-delay: -5.4s;
+  color: #736423;
+}
+
+.wavetext :nth-child(40n+14) {
+  animation-delay: -5.2s;
+  color: #876414;
+}
+
+.wavetext2 :nth-child(40n+14) {
+  animation-delay: -5.2s;
+  color: #876414;
+}
+
+.wavetext3 :nth-child(40n+14) {
+  animation-delay: -5.2s;
+  color: #876414;
+}
+
+.wavetext :nth-child(40n+15) {
+  animation-delay: -5s;
+  color: #9b643c;
+}
+
+.wavetext2 :nth-child(40n+15) {
+  animation-delay: -5s;
+  color: #9b643c;
+}
+
+.wavetext3 :nth-child(40n+15) {
+  animation-delay: -5s;
+  color: #9b643c;
+}
+
+.wavetext :nth-child(40n+16) {
+  animation-delay: -4.8s;
+  color: #14642d;
+}
+
+.wavetext2 :nth-child(40n+16) {
+  animation-delay: -4.8s;
+  color: #14642d;
+}
+
+.wavetext3 :nth-child(40n+16) {
+  animation-delay: -4.8s;
+  color: #14642d;
+}
+
+.wavetext :nth-child(40n+17) {
+  animation-delay: -4.6s;
+  color: #28641e;
+}
+
+.wavetext2 :nth-child(40n+17) {
+  animation-delay: -4.6s;
+  color: #28641e;
+}
+
+.wavetext3 :nth-child(40n+17) {
+  animation-delay: -4.6s;
+  color: #28641e;
+}
+
+.wavetext :nth-child(40n+18) {
+  animation-delay: -4.4s;
+  color: #3c640f;
+}
+
+.wavetext2 :nth-child(40n+18) {
+  animation-delay: -4.4s;
+  color: #3c640f;
+}
+
+.wavetext3 :nth-child(40n+18) {
+  animation-delay: -4.4s;
+  color: #3c640f;
+}
+
+.wavetext :nth-child(40n+19) {
+  animation-delay: -4.2s;
+  color: #506437;
+}
+
+.wavetext2 :nth-child(40n+19) {
+  animation-delay: -4.2s;
+  color: #506437;
+}
+
+.wavetext3 :nth-child(40n+19) {
+  animation-delay: -4.2s;
+  color: #506437;
+}
+
+.wavetext :nth-child(40n+20) {
+  animation-delay: -4s;
+  color: #646428;
+}
+
+.wavetext2 :nth-child(40n+20) {
+  animation-delay: -4s;
+  color: #646428;
+}
+
+.wavetext3 :nth-child(40n+20) {
+  animation-delay: -4s;
+  color: #646428;
+}
+
+.wavetext :nth-child(40n+21) {
+  animation-delay: -3.8s;
+  color: #786419;
+}
+
+.wavetext2 :nth-child(40n+21) {
+  animation-delay: -3.8s;
+  color: #786419;
+}
+
+.wavetext3 :nth-child(40n+21) {
+  animation-delay: -3.8s;
+  color: #786419;
+}
+
+.wavetext :nth-child(40n+22) {
+  animation-delay: -3.6s;
+  color: #8c640a;
+}
+
+.wavetext2 :nth-child(40n+22) {
+  animation-delay: -3.6s;
+  color: #8c640a;
+}
+
+.wavetext3 :nth-child(40n+22) {
+  animation-delay: -3.6s;
+  color: #8c640a;
+}
+
+.wavetext :nth-child(40n+23) {
+  animation-delay: -3.4s;
+  color: #a06432;
+}
+
+.wavetext2 :nth-child(40n+23) {
+  animation-delay: -3.4s;
+  color: #a06432;
+}
+
+.wavetext3 :nth-child(40n+23) {
+  animation-delay: -3.4s;
+  color: #a06432;
+}
+
+.wavetext :nth-child(40n+24) {
+  animation-delay: -3.2s;
+  color: #196423;
+}
+
+.wavetext2 :nth-child(40n+24) {
+  animation-delay: -3.2s;
+  color: #196423;
+}
+
+.wavetext3 :nth-child(40n+24) {
+  animation-delay: -3.2s;
+  color: #196423;
+}
+
+.wavetext :nth-child(40n+25) {
+  animation-delay: -3s;
+  color: #2d6414;
+}
+
+.wavetext2 :nth-child(40n+25) {
+  animation-delay: -3s;
+  color: #2d6414;
+}
+
+.wavetext3 :nth-child(40n+25) {
+  animation-delay: -3s;
+  color: #2d6414;
+}
+
+.wavetext :nth-child(40n+26) {
+  animation-delay: -2.8s;
+  color: #41643c;
+}
+
+.wavetext2 :nth-child(40n+26) {
+  animation-delay: -2.8s;
+  color: #41643c;
+}
+
+.wavetext3 :nth-child(40n+26) {
+  animation-delay: -2.8s;
+  color: #41643c;
+}
+
+.wavetext :nth-child(40n+27) {
+  animation-delay: -2.6s;
+  color: #55642d;
+}
+
+.wavetext2 :nth-child(40n+27) {
+  animation-delay: -2.6s;
+  color: #55642d;
+}
+
+.wavetext3 :nth-child(40n+27) {
+  animation-delay: -2.6s;
+  color: #55642d;
+}
+
+.wavetext :nth-child(40n+28) {
+  animation-delay: -2.4s;
+  color: #69641e;
+}
+
+.wavetext2 :nth-child(40n+28) {
+  animation-delay: -2.4s;
+  color: #69641e;
+}
+
+.wavetext3 :nth-child(40n+28) {
+  animation-delay: -2.4s;
+  color: #69641e;
+}
+
+.wavetext :nth-child(40n+29) {
+  animation-delay: -2.2s;
+  color: #7d640f;
+}
+
+.wavetext2 :nth-child(40n+29) {
+  animation-delay: -2.2s;
+  color: #7d640f;
+}
+
+.wavetext3 :nth-child(40n+29) {
+  animation-delay: -2.2s;
+  color: #7d640f;
+}
+
+.wavetext :nth-child(40n+30) {
+  animation-delay: -2s;
+  color: #916437;
+}
+
+.wavetext2 :nth-child(40n+30) {
+  animation-delay: -2s;
+  color: #916437;
+}
+
+.wavetext3 :nth-child(40n+30) {
+  animation-delay: -2s;
+  color: #916437;
+}
+
+.wavetext :nth-child(40n+31) {
+  animation-delay: -1.8s;
+  color: #0a6428;
+}
+
+.wavetext2 :nth-child(40n+31) {
+  animation-delay: -1.8s;
+  color: #0a6428;
+}
+
+.wavetext3 :nth-child(40n+31) {
+  animation-delay: -1.8s;
+  color: #0a6428;
+}
+
+.wavetext :nth-child(40n+32) {
+  animation-delay: -1.6s;
+  color: #1e6419;
+}
+
+.wavetext2 :nth-child(40n+32) {
+  animation-delay: -1.6s;
+  color: #1e6419;
+}
+
+.wavetext3 :nth-child(40n+32) {
+  animation-delay: -1.6s;
+  color: #1e6419;
+}
+
+.wavetext :nth-child(40n+33) {
+  animation-delay: -1.4s;
+  color: #32640a;
+}
+
+.wavetext2 :nth-child(40n+33) {
+  animation-delay: -1.4s;
+  color: #32640a;
+}
+
+.wavetext3 :nth-child(40n+33) {
+  animation-delay: -1.4s;
+  color: #32640a;
+}
+
+.wavetext :nth-child(40n+34) {
+  animation-delay: -1.2s;
+  color: #466432;
+}
+
+.wavetext2 :nth-child(40n+34) {
+  animation-delay: -1.2s;
+  color: #466432;
+}
+
+.wavetext3 :nth-child(40n+34) {
+  animation-delay: -1.2s;
+  color: #466432;
+}
+
+.wavetext :nth-child(40n+35) {
+  animation-delay: -1s;
+  color: #5a6423;
+}
+
+.wavetext2 :nth-child(40n+35) {
+  animation-delay: -1s;
+  color: #5a6423;
+}
+
+.wavetext3 :nth-child(40n+35) {
+  animation-delay: -1s;
+  color: #5a6423;
+}
+
+.wavetext :nth-child(40n+36) {
+  animation-delay: -0.8s;
+  color: #6e6414;
+}
+
+.wavetext2 :nth-child(40n+36) {
+  animation-delay: -0.8s;
+  color: #6e6414;
+}
+
+.wavetext3 :nth-child(40n+36) {
+  animation-delay: -0.8s;
+  color: #6e6414;
+}
+
+.wavetext :nth-child(40n+37) {
+  animation-delay: -0.6s;
+  color: #82643c;
+}
+
+.wavetext2 :nth-child(40n+37) {
+  animation-delay: -0.6s;
+  color: #82643c;
+}
+
+.wavetext3 :nth-child(40n+37) {
+  animation-delay: -0.6s;
+  color: #82643c;
+}
+
+.wavetext :nth-child(40n+38) {
+  animation-delay: -0.4s;
+  color: #96642d;
+}
+
+.wavetext2 :nth-child(40n+38) {
+  animation-delay: -0.4s;
+  color: #96642d;
+}
+
+.wavetext3 :nth-child(40n+38) {
+  animation-delay: -0.4s;
+  color: #96642d;
+}
+
+.wavetext :nth-child(40n+39) {
+  animation-delay: -0.2s;
+  color: #0f641e;
+}
+
+.wavetext2 :nth-child(40n+39) {
+  animation-delay: -0.2s;
+  color: #0f641e;
+}
+
+.wavetext3 :nth-child(40n+39) {
+  animation-delay: -0.2s;
+  color: #0f641e;
+}
+
+/*# sourceMappingURL=output.css.map */
