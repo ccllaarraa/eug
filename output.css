@@ -270,4 +270,17 @@ ul {
   color: #0f641e;
 }
 
+@media only screen and (max-width: 900px) {
+  .eug-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eug-background {
+    width: 152%;
+    position: fixed;
+  }
+}
+
 /*# sourceMappingURL=output.css.map */
