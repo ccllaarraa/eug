@@ -1,7 +1,38 @@
 
 
-body { background-color : lightblue;
+body { margin:0;
+  padding: 0;
+  background-color: turquoise;
+  // background-image: url(./assets/fond-vierge.png);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  
   ; }
+
+  button:focus {outline:0;}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.eug-main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+
+
+.eug-background {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
 
 $offset : -90px;
 $count : 40;
@@ -13,16 +44,17 @@ $duration : 4;
   to   { transform : translateY( $offset ); }
 }
 
-.wavetext , .wavetext2, .wavetext3 {
-  margin-top : 10em;
-  text-align : center;
+.wavetext  {
+  margin-top: 150px;
+    text-align: left;
+    margin-left: 50px;
 }
 
 
-.wavetext span , .wavetext2 span, .wavetext3 span{
+.wavetext span {
   display: inline-block;
   font-family : "Helvetica", sans-serif;
-  font-size : 15px;
+  font-size : 75px;
  
   animation-duration: #{$duration}s;
   animation-name: wave;
@@ -39,20 +71,7 @@ $duration : 4;
 
       color: rgba(10+$i * 20 % 155, 100, 10+ $i * 40 % 55, 1000);
   }
-  .wavetext2 :nth-child( #{$count}n + #{$i} ) {
-    animation-delay : 
-      -#{($count - $i) * 2 * $duration / $count }s;
-
-
-    color: rgba(10+$i * 20 % 155, 100, 10+ $i * 40 % 55, 1000);
-}
-.wavetext3 :nth-child( #{$count}n + #{$i} ) {
-    animation-delay : 
-      -#{($count - $i) * 2 * $duration / $count }s;
-
-
-    color: rgba(10+$i * 20 % 155, 100, 10+ $i * 40 % 55, 1000);
-}
+ 
 }
 
 
