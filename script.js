@@ -1,6 +1,6 @@
 var text = "Introduction à (hier: oui un jour)";
 var text2 = "La vieille fille sous le soleil mort";
-var text3 = "c'est les vacances";
+var text3 = "c'est les grandes vacances";
 
 for(var i in text) { 
   if(text[i] === " ") {
