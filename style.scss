@@ -8,6 +8,7 @@ body { margin:0;
   // background-size: cover;
   height: 100%;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
   
   ; }
 
@@ -42,9 +43,43 @@ ul {
 }
 
 .eug-menu {
-  font-family: helvetica;
-    font-size: 24px;
-    line-height: 31px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.titre-projet {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 130px 0 44px;
+}
+.vacs-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.vac-vid {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vac-vid iframe {
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.vac-perf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.vac-perf img {
+max-width: 400px;
+margin: 20px;
+border-radius: 15px;
 }
 
 $offset : -90px;
@@ -53,8 +88,18 @@ $duration : 4;
 
 
 @keyframes wave {
-  from { transform : translateY(0); color: white; }
+  from { transform : translateY(0); color: turquoise; }
   to   { transform : translateY( $offset ); }
+}
+
+@keyframes wavemiddle {
+  from { transform : translateY(0); color: white; }
+  to   { transform : translateY( -40px ); }
+}
+
+@keyframes wavesmall {
+  from { transform : translateY(0); color: white; }
+  to   { transform : translateY( -20px ); }
 }
 
 .wavetext  {
@@ -66,7 +111,7 @@ $duration : 4;
 
 .wavetext span {
   display: inline-block;
-  font-family : "Helvetica", sans-serif;
+  font-family : Arial, Helvetica, sans-serif;
   font-size : 75px;
  
   animation-duration: #{$duration}s;
@@ -75,6 +120,27 @@ $duration : 4;
   animation-direction: alternate;
 }
 
+.titre-wave span{
+  display: inline-block;
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 30px;
+ 
+  animation-duration: #{$duration}s;
+  animation-name: wavemiddle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.tititre span, .tititre2 span{
+  display: inline-block;
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 20px;
+ 
+  animation-duration: #{$duration}s;
+  animation-name: wavesmall;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
 @for $i from 0 to $count {
   .wavetext :nth-child( #{$count}n + #{$i} ) {
@@ -82,8 +148,23 @@ $duration : 4;
         -#{($count - $i) * 2 * $duration / $count }s;
 
 
-      color: rgba(10+$i * 20 % 155, 100, 10+ $i * 40 % 55, 1000);
+      color: rgba(100+$i * 20 % 155, 10, 10+ $i * 40 % 55, 1000);
   }
+  .titre-wave :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+    color: rgba(200+$i * 20 % 255, 500, 10+ $i * 40 % 55, 1000);
+}
+.tititre :nth-child( #{$count}n + #{$i} ) {
+  animation-delay : 
+    -#{($count - $i) * 2 * $duration / $count }s;
+  color: rgba(200+$i * 20 % 255, 150, 10+ $i * 40 % 555, 1000);
+}
+.tititre2 :nth-child( #{$count}n + #{$i} ) {
+  animation-delay : 
+    -#{($count - $i) * 2 * $duration / $count }s;
+  color: rgba(555+$i * 20 % 55, 150, 10+ $i * 40 % 555, 1000);
+}
  
 }
 
