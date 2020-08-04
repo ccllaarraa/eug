@@ -67,6 +67,7 @@ ul {
 .vac-vid iframe {
   margin: 20px;
   border-radius: 15px;
+  border: 1px solid yellow;
 }
 
 .vac-perf {
@@ -80,6 +81,7 @@ ul {
 max-width: 400px;
 margin: 20px;
 border-radius: 15px;
+border: 1px solid yellow;
 }
 
 $offset : -90px;
@@ -158,12 +160,12 @@ $duration : 4;
 .tititre :nth-child( #{$count}n + #{$i} ) {
   animation-delay : 
     -#{($count - $i) * 2 * $duration / $count }s;
-  color: rgba(200+$i * 20 % 255, 150, 10+ $i * 40 % 555, 1000);
+    color: rgba(200+$i * 20 % 255, 500, 10+ $i * 40 % 55, 1000);
 }
 .tititre2 :nth-child( #{$count}n + #{$i} ) {
   animation-delay : 
     -#{($count - $i) * 2 * $duration / $count }s;
-  color: rgba(555+$i * 20 % 55, 150, 10+ $i * 40 % 555, 1000);
+    color: rgba(200+$i * 20 % 255, 500, 10+ $i * 40 % 55, 1000);
 }
  
 }
