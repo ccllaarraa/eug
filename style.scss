@@ -20,6 +20,11 @@ a {
 ul {
   list-style: none;
 }
+
+@font-face {
+  font-family: 'flames';
+  src: url('./assets/flaming_tears.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 .eug-main {
   position: absolute;
   top: 0;
@@ -90,17 +95,17 @@ $duration : 4;
 
 
 @keyframes wave {
-  from { transform : translateY(0); color: turquoise; }
+  from { transform : translateY(0); color: rgb(32, 255, 2); }
   to   { transform : translateY( $offset ); }
 }
 
 @keyframes wavemiddle {
-  from { transform : translateY(0); color: white; }
+  from { transform : translateY(0); color:  rgb(32, 255, 2);; }
   to   { transform : translateY( -40px ); }
 }
 
 @keyframes wavesmall {
-  from { transform : translateY(0); color: white; }
+  from { transform : translateY(0); color:  rgb(32, 255, 2);; }
   to   { transform : translateY( -20px ); }
 }
 
@@ -113,7 +118,7 @@ $duration : 4;
 
 .wavetext span {
   display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
+  font-family : 'flames';
   font-size : 75px;
  
   animation-duration: #{$duration}s;
@@ -148,24 +153,24 @@ $duration : 4;
   .wavetext :nth-child( #{$count}n + #{$i} ) {
       animation-delay : 
         -#{($count - $i) * 2 * $duration / $count }s;
-
-
-      color: rgba(100+$i * 20 % 155, 10, 10+ $i * 40 % 55, 1000);
+      // color: rgba(100+$i * 20 % 155, 10, 10+ $i * 40 % 55, 1000);
+      color:  rgb(32, 255, 2);
+    
   }
   .titre-wave :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-    color: rgba(200+$i * 20 % 255, 500, 10+ $i * 40 % 55, 1000);
+      color:  rgb(32, 255, 2);
 }
 .tititre :nth-child( #{$count}n + #{$i} ) {
   animation-delay : 
     -#{($count - $i) * 2 * $duration / $count }s;
-    color: rgba(200+$i * 20 % 255, 500, 10+ $i * 40 % 55, 1000);
+    color:  rgb(32, 255, 2);
 }
 .tititre2 :nth-child( #{$count}n + #{$i} ) {
   animation-delay : 
     -#{($count - $i) * 2 * $duration / $count }s;
-    color: rgba(200+$i * 20 % 255, 500, 10+ $i * 40 % 55, 1000);
+    color:  rgb(32, 255, 2);
 }
  
 }
