@@ -2,6 +2,14 @@ var text = "Eugenie Zely";
 var vacstitre1 = "C'est les vacances, 2019-2020";
 var vacsfilm="Un film";
 var vacsperf='Une performance';
+var hiertitre1 = "Hier, oui : un jour, 2018 - 2019";
+var hier1="Introduction à (hier : oui, un jour)";
+var hier2="Quelqu’un d’autre que moi va payer pour cette journée-là";
+var hier3="Conclusion pour (hier : oui, un jour)";
+var hier4="**après avoir pleuré on se mouche";
+var vieille="La Vieille Fille sous le Soleil Mort";
+var writing="Writing as Reading as Listening as Remembering as Thinking as Living";
+var unbox="Some plans to unbox reality";
 
 for(var i in text) { 
   if(text[i] === " ") {
@@ -36,4 +44,64 @@ for(var l in vacsperf) {
   }
 }
 
+for(var k in hiertitre1) { 
+  if(hiertitre1[k] === " ") {
+    $(".titre2-wave").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".titre2-wave").append( $("<span>").text(hiertitre1[k]) ); 
+  }
+}
 
+for(var k in hier1) { 
+  if(hier1[k] === " ") {
+    $(".titre-hier").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".titre-hier").append( $("<span>").text(hier1[k]) ); 
+  }
+}
+for(var k in hier2) { 
+  if(hier2[k] === " ") {
+    $(".titre-hier2").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".titre-hier2").append( $("<span>").text(hier2[k]) ); 
+  }
+}
+for(var k in hier3) { 
+  if(hier3[k] === " ") {
+    $(".titre-hier3").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".titre-hier3").append( $("<span>").text(hier3[k]) ); 
+  }
+}
+for(var k in hier4) { 
+  if(hier4[k] === " ") {
+    $(".titre-hier4").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".titre-hier4").append( $("<span>").text(hier4[k]) ); 
+  }
+}
+
+for(var k in vieille) { 
+  if(vieille[k] === " ") {
+    $(".vieille-fille").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".vieille-fille").append( $("<span>").text(vieille[k]) ); 
+  }
+}
+
+
+for(var k in writing) { 
+  if(writing[k] === " ") {
+    $(".writing-titre").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".writing-titre").append( $("<span>").text(writing[k]) ); 
+  }
+}
+
+for(var k in unbox) { 
+  if(unbox[k] === " ") {
+    $(".unbox-titre").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".unbox-titre").append( $("<span>").text(unbox[k]) ); 
+  }
+}

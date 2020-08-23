@@ -9,13 +9,13 @@ body { margin:0;
   height: 100%;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-  
+  color:  rgb(32, 255, 2);
   ; }
 
   button:focus {outline:0;}
 a {
     text-decoration: none;
-    color: black;
+    color:  rgb(32, 255, 2);
 }
 ul {
   list-style: none;
@@ -72,7 +72,7 @@ ul {
 .vac-vid iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid yellow;
+  border: 1px solid rgb(32, 255, 2);
 }
 
 .vac-perf {
@@ -85,8 +85,123 @@ ul {
 .vac-perf img {
 max-width: 400px;
 margin: 20px;
-border-radius: 15px;
-border: 1px solid yellow;
+border-radius: 20px;
+border: 1px solid  rgb(32, 255, 2);
+}
+
+
+.hier-video {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hier-vid iframe {
+  margin: 20px;
+  border-radius: 15px;
+  border: 1px solid rgb(32, 255, 2);
+  max-width: 370px;
+}
+
+.hier-vid {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hier-vid-capt {
+  max-width: 370px;
+    font-size: 12px;
+    color: rgb(32, 255, 2);
+}
+.vieille-fille {
+  display: flex;
+    justify-content: center;
+    margin: 130px 0 0 0;
+}
+
+.vieille-fille-img {
+  max-width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid #20ff02;
+}
+.vieille-fille-img-2 {
+  max-height: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid #20ff02;
+}
+.vieille-images-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vieille-images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vieille-texte {
+  max-width: 650px;
+  padding: 50px;
+font-size: 20px;
+  margin: auto;
+}
+
+
+.writing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.writing-titre {
+  margin: 100px 0 20px 0;
+}
+.writing-images img {
+  max-width: 400px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid #20ff02;
+}
+
+.writing-images {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.unbox {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.unbox-titre {
+  margin: 100px 0 20px 0;
+}
+.unbox-imgs img {
+  max-width: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid #20ff02;
+}
+.unbox-imgs img:nth-child(2) {
+height: 300px;
+}
+.unbox-imgs {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.unbox-text {
+  max-width: 650px;
+  padding: 0 0 10px;
+  font-size: 15px;
+  margin: auto;
 }
 
 $offset : -90px;
@@ -120,7 +235,6 @@ $duration : 4;
   display: inline-block;
   font-family : 'flames';
   font-size : 75px;
- 
   animation-duration: #{$duration}s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -131,23 +245,53 @@ $duration : 4;
   display: inline-block;
   font-family : Arial, Helvetica, sans-serif;
   font-size : 30px;
- 
+  animation-duration: #{$duration}s;
+  animation-name: wavemiddle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.titre2-wave span{
+  display: inline-block;
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 30px;
+  animation-duration: #{$duration}s;
+  animation-name: wavemiddle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.tititre span, .tititre2 span{
+  display: inline-block;
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 20px;
+  font-style: italic;
+  animation-duration: #{$duration}s;
+  animation-name: wavesmall;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.titre-hier span , .titre-hier2 span, .titre-hier3 span, .titre-hier4 span{
+  display: inline-block;
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 15px;
+  font-style: italic;
+  animation-duration: #{$duration}s;
+  animation-name: wavesmall;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.vieille-fille span, .writing-titre span, .unbox-titre span{
+  display: inline-block;
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 20px;
   animation-duration: #{$duration}s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-.tititre span, .tititre2 span{
-  display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
-  font-size : 20px;
- 
-  animation-duration: #{$duration}s;
-  animation-name: wavesmall;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+
 
 @for $i from 0 to $count {
   .wavetext :nth-child( #{$count}n + #{$i} ) {
@@ -161,17 +305,61 @@ $duration : 4;
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
       color:  rgb(32, 255, 2);
-}
-.tititre :nth-child( #{$count}n + #{$i} ) {
-  animation-delay : 
-    -#{($count - $i) * 2 * $duration / $count }s;
-    color:  rgb(32, 255, 2);
-}
-.tititre2 :nth-child( #{$count}n + #{$i} ) {
-  animation-delay : 
-    -#{($count - $i) * 2 * $duration / $count }s;
-    color:  rgb(32, 255, 2);
-}
+      background-color: #3297fd;
+  }
+  .tititre :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .tititre2 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .titre2-wave :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+      background-color: #3297fd;
+  }
+  .titre-hier :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .titre-hier2 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .titre-hier3 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .titre-hier4 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .vieille-fille :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+  }
+  .writing-titre :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+      
+  }
+  .unbox-titre :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color:  rgb(32, 255, 2);
+      
+  }
  
 }
 
