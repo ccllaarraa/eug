@@ -10,6 +10,9 @@ var hier4="**après avoir pleuré on se mouche";
 var vieille="La Vieille Fille sous le Soleil Mort";
 var writing="Writing as Reading as Listening as Remembering as Thinking as Living";
 var unbox="Some plans to unbox reality";
+var nappe="A crying tablecloth to make reality viewable";
+var moyenne = "Une année moyenne";
+var ep="Des chansons simples sur le sentiment amoureux";
 
 for(var i in text) { 
   if(text[i] === " ") {
@@ -105,3 +108,30 @@ for(var k in unbox) {
     $(".unbox-titre").append( $("<span>").text(unbox[k]) ); 
   }
 }
+
+
+for(var k in nappe) { 
+  if(nappe[k] === " ") {
+    $(".tablecloth-titre").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".tablecloth-titre").append( $("<span>").text(nappe[k]) ); 
+  }
+}
+
+for(var k in moyenne) { 
+  if(moyenne[k] === " ") {
+    $(".moyenne-titre").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".moyenne-titre").append( $("<span>").text(moyenne[k]) ); 
+  }
+}
+
+for(var k in ep) { 
+  if(ep[k] === " ") {
+    $(".ep-titre").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".ep-titre").append( $("<span>").text(ep[k]) ); 
+  }
+}
+
+
