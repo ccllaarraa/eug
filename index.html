@@ -15,36 +15,34 @@
 
 </head>
 <body>
-    <!-- <div class="wavetext"></div>
-    <div class="wavetext2"></div>
-    <div class="wavetext3"></div> -->
-
-
 
     <div class="eug-main">
+       
         <img src="assets/fond-vierge.png" class="eug-background">
-     
 
         <div class="eug-header">
             <div class="wavetext"></div>
 
             <div class="eug-menu">
-                <ul>
-                    <li><a href='./assets/Eugénie-Zély- CV.pdf' target='_blank' >CV</a></li>
-                    <li><a href='./assets/Eugénie-Zély-portfolio.pdf' target='_blank' >Portfolio</a></li>
-                    <li><a href="mailto:eugenie.zely@hotmail.fr " target="_top">E-mail</a></li>
-                    <li><a href="https://www.instagram.com/eugenie.zely/" target="_blank">Instagram</a></li>
-                    <li><a href="paintings.html">Digital paintings (making
-                        salable items)</a></li><br><br>
-                    <li>Publications</li>
-                </ul>
+                <div class="tab">
+
+                    <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'works')" >Works</button>
+                    <button class="tablinks" onclick="openTab(event, 'digital')">Digital paintings (making salable items)</button>
+                    <button class="tablinks" onclick="openTab(event, 'publications')">Publications</button>
+                     <a href='./assets/Eugénie-Zély- CV.pdf' target='_blank' >CV</a>
+                       <a href='./assets/Eugénie-Zély-portfolio.pdf' target='_blank' >Portfolio</a>
+                       <a href="mailto:eugenie.zely@hotmail.fr " target="_top">E-mail</a>
+                     <a href="https://www.instagram.com/eugenie.zely/" target="_blank">Instagram</a>
+               
+                  </div>
             </div>
 
 
 
          </div>
 
-
+       
+    <div id="works" class="tabcontent">
         <div class="vacances">
             <div class="titre-projet titre-wave"></div>
 
@@ -55,9 +53,13 @@
                 </div>
                 <div class="vac-perf"> 
                     <div class="tititre2"></div>
-                    <img src="assets/1_VAC1.jpg">
-                    <img src="assets/1_bis_vignette.jpg">
                     <span>Lecture performée Centre Pompidou, Festival Extra! 2019</span>
+                    <div>
+                        <img src="assets/1_VAC1.jpg">
+                        <img src="assets/1_bis_vignette.jpg">
+                    </div>
+                   
+                  
                 </div>
     
             </div>
@@ -95,7 +97,8 @@
 
             <div class="vieille">
                 <div class="vieille-fille"></div>
-
+                <div class="vieille-caption">La performance a eu lieu au centre Wallonie Bruxelles en juin 2019 pour la soirée Labo Démo
+                    #1 : Entaille dans la littérature contemporaine</div>
                 <div class="vieille-images-ctn">
                     <div class="vieille-images">
                         <img class="vieille-fille-img" src="assets/hier/vieille-fille/VF4.JPG">
@@ -105,8 +108,7 @@
                         <img class="vieille-fille-img-2" src="assets/hier/vieille-fille/VF3.jpeg">
                         <img class="vieille-fille-img-2" src="assets/hier/vieille-fille/VF2.png">
                     </div>
-                    <div class="vieille-caption">La performance a eu lieu au centre Wallonie Bruxelles en juin 2019 pour la soirée Labo Démo
-                        #1 : Entaille dans la littérature contemporaine</div>
+                 
                 </div>
 
                 <div class="vieille-texte">
@@ -228,9 +230,19 @@ Là, <i>Vous me voyez comme une star mais je ne suis qu’une femme.</i> Une vie
            
            
         </div>
+    </div>
 
     </div>
 
+
+    <div id="digital " class="tabcontent">
+
+    </div>
+
+
+    <div id="publications" class="tabcontent">
+
+    </div>
 
     <script src="./script.js" type="text/javascript"></script>
    
