@@ -37,7 +37,6 @@ ul {
   z-index: 99;
   text-align: center;
 }
-
 #loading-image {
  width: 100px;
  margin-top: 200px;
@@ -550,6 +549,30 @@ $titres : #8104bf;
   animation-direction: alternate;
 }
 
+.men1.active span,
+.men1:hover span ,
+.men2.active span,
+.men2:hover span ,
+.men3.active span,
+.men3:hover span ,
+.men4.active span,
+.men4:hover span ,
+.men5.active span,
+.men5:hover span ,
+.men6.active span,
+.men6:hover span ,
+.men7.active span,
+.men7:hover span 
+{
+  display: inline-block;
+  font-family : "Times New Roman";
+  font-size : 26px;
+  animation-duration: #{$duration}s;
+  animation-name: wavemiddle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color:  #38a829;
+}
 
 
 @for $i from 0 to $count {
@@ -674,6 +697,11 @@ $titres : #8104bf;
       color: $titres;   
   }
 }
+
+.doc {
+  border-radius: 50% !important;
+}
+
 
 
 @media only screen and (max-width: 900px) {

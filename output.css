@@ -575,6 +575,30 @@ ul {
   animation-direction: alternate;
 }
 
+.men1.active span,
+.men1:hover span,
+.men2.active span,
+.men2:hover span,
+.men3.active span,
+.men3:hover span,
+.men4.active span,
+.men4:hover span,
+.men5.active span,
+.men5:hover span,
+.men6.active span,
+.men6:hover span,
+.men7.active span,
+.men7:hover span {
+  display: inline-block;
+  font-family: "Times New Roman";
+  font-size: 26px;
+  animation-duration: 4s;
+  animation-name: wavemiddle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #38a829;
+}
+
 .wavetext :nth-child(40n+0) {
   animation-delay: -8s;
   color: #38a829;
@@ -4973,6 +4997,10 @@ ul {
 .men7 :nth-child(40n+39) {
   animation-delay: -0.2s;
   color: #8104bf;
+}
+
+.doc {
+  border-radius: 50% !important;
 }
 
 @media only screen and (max-width: 900px) {
