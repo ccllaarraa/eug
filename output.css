@@ -17,13 +17,17 @@ a {
   color: #0a67f7;
 }
 
+a:hover {
+  color: #38a829;
+}
+
 ul {
   list-style: none;
 }
 
 @font-face {
   font-family: "flames";
-  src: url("./assets/flaming_tears.ttf") format("truetype");
+  src: url("./assets/Zapfino.ttf") format("truetype");
 }
 #loading {
   width: 100%;
@@ -137,7 +141,7 @@ ul {
   margin: auto;
   width: 100%;
   text-align: center;
-  padding: 90px 0 44px;
+  padding: 50px 0 44px;
 }
 
 .vacs-content {
@@ -173,6 +177,11 @@ ul {
   border: 1px solid #0a67f7;
 }
 
+.caption {
+  font-size: 25px;
+  padding: 10px;
+}
+
 .hier-video {
   display: flex;
   justify-content: space-around;
@@ -195,8 +204,8 @@ ul {
 }
 
 .hier-vid-capt {
-  max-width: 370px;
-  font-size: 12px;
+  max-width: 600px;
+  font-size: 25px;
   color: #0a67f7;
 }
 
@@ -239,9 +248,9 @@ ul {
 }
 
 .vieille-texte {
-  max-width: 650px;
+  max-width: 900px;
   padding: 50px;
-  font-size: 20px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -297,9 +306,9 @@ ul {
 }
 
 .unbox-text {
-  max-width: 650px;
+  max-width: 800px;
   padding: 0 0 10px;
-  font-size: 15px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -328,9 +337,9 @@ ul {
 }
 
 .tablecloth-text {
-  max-width: 650px;
-  padding: 0 0 10px;
-  font-size: 15px;
+  max-width: 800px;
+  padding: 0 0 30px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -374,7 +383,7 @@ ul {
 .moyenne-text {
   max-width: 650px;
   padding: 0 0 10px;
-  font-size: 15px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -393,7 +402,7 @@ ul {
 .ep-text {
   max-width: 650px;
   padding: 0 0 10px;
-  font-size: 15px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -423,8 +432,9 @@ ul {
 }
 
 .painting span {
-  font-size: 20px;
+  font-size: 30px;
   padding-top: 15px;
+  max-width: 300px;
 }
 
 .sale-info {
@@ -436,7 +446,7 @@ ul {
 
 .pubs {
   font-size: 22px;
-  max-width: 600px;
+  max-width: 900px;
   margin: auto;
   margin-top: 100px;
 }
@@ -448,13 +458,14 @@ ul {
 }
 
 .txt-titre {
-  font-size: 30px;
+  font-size: 45px;
   padding-bottom: 40px;
   text-align: center;
 }
 
 .txt-critiques span {
   padding-bottom: 30px;
+  font-size: 30px;
 }
 
 .publi-num {
@@ -464,16 +475,17 @@ ul {
 }
 
 .publi-titre {
-  font-size: 30px;
+  font-size: 45px;
   padding-bottom: 40px;
   text-align: center;
 }
 
 .publi-num span {
   padding-bottom: 30px;
+  font-size: 30px;
 }
 
-.publi-num span a {
+.publi-num span a, .txt-critiques span a {
   text-decoration: underline;
 }
 
@@ -502,13 +514,13 @@ ul {
   }
 }
 .wavetext {
-  margin-top: 160px;
+  margin-top: 65px;
 }
 
 .wavetext span {
   display: inline-block;
   font-family: "flames";
-  font-size: 100px;
+  font-size: 80px;
   animation-duration: 4s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -518,7 +530,7 @@ ul {
 .titre-wave span {
   display: inline-block;
   font-family: "Times New Roman";
-  font-size: 30px;
+  font-size: 50px;
   animation-duration: 4s;
   animation-name: wavesection;
   animation-iteration-count: infinite;
@@ -528,7 +540,7 @@ ul {
 .titre2-wave span {
   display: inline-block;
   font-family: "Times New Roman";
-  font-size: 30px;
+  font-size: 50px;
   animation-duration: 4s;
   animation-name: wavesection;
   animation-iteration-count: infinite;
@@ -538,7 +550,7 @@ ul {
 .tititre span, .tititre2 span {
   display: inline-block;
   font-family: "Times New Roman";
-  font-size: 20px;
+  font-size: 30px;
   animation-duration: 4s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
@@ -548,7 +560,7 @@ ul {
 .titre-hier span, .titre-hier2 span, .titre-hier3 span, .titre-hier4 span {
   display: inline-block;
   font-family: "Times New Roman";
-  font-size: 15px;
+  font-size: 30px;
   animation-duration: 4s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
@@ -558,7 +570,7 @@ ul {
 .vieille-fille span, .writing-titre span, .unbox-titre span, .tablecloth-titre span, .moyenne-titre span, .ep-titre span {
   display: inline-block;
   font-family: "Times New Roman";
-  font-size: 20px;
+  font-size: 30px;
   animation-duration: 4s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
@@ -676,37 +688,37 @@ ul {
 
 .men1 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+1) {
@@ -786,37 +798,37 @@ ul {
 
 .men1 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+2) {
@@ -896,37 +908,37 @@ ul {
 
 .men1 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+3) {
@@ -1006,37 +1018,37 @@ ul {
 
 .men1 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+4) {
@@ -1116,37 +1128,37 @@ ul {
 
 .men1 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+5) {
@@ -1226,37 +1238,37 @@ ul {
 
 .men1 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+6) {
@@ -1336,37 +1348,37 @@ ul {
 
 .men1 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+7) {
@@ -1446,37 +1458,37 @@ ul {
 
 .men1 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+8) {
@@ -1556,37 +1568,37 @@ ul {
 
 .men1 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+9) {
@@ -1666,37 +1678,37 @@ ul {
 
 .men1 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+10) {
@@ -1776,37 +1788,37 @@ ul {
 
 .men1 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+11) {
@@ -1886,37 +1898,37 @@ ul {
 
 .men1 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+12) {
@@ -1996,37 +2008,37 @@ ul {
 
 .men1 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+13) {
@@ -2106,37 +2118,37 @@ ul {
 
 .men1 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+14) {
@@ -2216,37 +2228,37 @@ ul {
 
 .men1 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+15) {
@@ -2326,37 +2338,37 @@ ul {
 
 .men1 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+16) {
@@ -2436,37 +2448,37 @@ ul {
 
 .men1 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+17) {
@@ -2546,37 +2558,37 @@ ul {
 
 .men1 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+18) {
@@ -2656,37 +2668,37 @@ ul {
 
 .men1 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+19) {
@@ -2766,37 +2778,37 @@ ul {
 
 .men1 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+20) {
@@ -2876,37 +2888,37 @@ ul {
 
 .men1 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+21) {
@@ -2986,37 +2998,37 @@ ul {
 
 .men1 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+22) {
@@ -3096,37 +3108,37 @@ ul {
 
 .men1 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+23) {
@@ -3206,37 +3218,37 @@ ul {
 
 .men1 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+24) {
@@ -3316,37 +3328,37 @@ ul {
 
 .men1 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+25) {
@@ -3426,37 +3438,37 @@ ul {
 
 .men1 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+26) {
@@ -3536,37 +3548,37 @@ ul {
 
 .men1 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+27) {
@@ -3646,37 +3658,37 @@ ul {
 
 .men1 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+28) {
@@ -3756,37 +3768,37 @@ ul {
 
 .men1 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+29) {
@@ -3866,37 +3878,37 @@ ul {
 
 .men1 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+30) {
@@ -3976,37 +3988,37 @@ ul {
 
 .men1 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+31) {
@@ -4086,37 +4098,37 @@ ul {
 
 .men1 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+32) {
@@ -4196,37 +4208,37 @@ ul {
 
 .men1 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+33) {
@@ -4306,37 +4318,37 @@ ul {
 
 .men1 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+34) {
@@ -4416,37 +4428,37 @@ ul {
 
 .men1 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+35) {
@@ -4526,37 +4538,37 @@ ul {
 
 .men1 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+36) {
@@ -4636,37 +4648,37 @@ ul {
 
 .men1 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+37) {
@@ -4746,37 +4758,37 @@ ul {
 
 .men1 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+38) {
@@ -4856,37 +4868,37 @@ ul {
 
 .men1 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .wavetext :nth-child(40n+39) {
@@ -4966,41 +4978,54 @@ ul {
 
 .men1 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men2 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men3 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men4 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men5 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men6 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .men7 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #8104bf;
+  color: #0a67f7;
 }
 
 .doc {
   border-radius: 50% !important;
+}
+
+.vacances, .hier {
+  background-image: linear-gradient(to bottom, transparent 50px, transparent 0);
+  margin: auto auto 50px auto;
+}
+
+.titre-wave, .titre2-wave {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 50px;
+  top: 0;
+  margin: 0;
 }
 
 @media only screen and (max-width: 900px) {

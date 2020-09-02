@@ -17,13 +17,16 @@ a {
     text-decoration: none;
     color:  #0a67f7;
 }
+a:hover {
+  color:  #38a829;
+}
 ul {
   list-style: none;
 }
 
 @font-face {
   font-family: 'flames';
-  src: url('./assets/flaming_tears.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('./assets/Zapfino.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 #loading {
@@ -135,7 +138,7 @@ ul {
   margin: auto;
   width: 100%;
   text-align: center;
-  padding: 90px 0 44px;
+  padding: 50px 0 44px;
 }
 .vacs-content {
   display: flex;
@@ -170,6 +173,10 @@ border-radius: 20px;
 border: 1px solid  #0a67f7;
 }
 
+.caption{
+  font-size: 25px;
+  padding: 10px;
+}
 
 .hier-video {
   display: flex;
@@ -193,8 +200,8 @@ border: 1px solid  #0a67f7;
     margin-bottom: 100px;
 }
 .hier-vid-capt {
-  max-width: 370px;
-    font-size: 12px;
+  max-width: 600px;
+    font-size: 25px;
     color: #0a67f7;
 }
 .vieille-fille {
@@ -228,14 +235,13 @@ border: 1px solid  #0a67f7;
 }
 .vieille-caption {
   max-width: 650px;
-
   margin: auto;
 }
 .vieille-texte {
-  max-width: 650px;
-  padding: 50px;
-font-size: 20px;
-  margin: auto;
+  max-width: 900px;
+    padding: 50px;
+    font-size: 25px;
+    margin: auto;
 }
 
 
@@ -285,10 +291,10 @@ height: 300px;
 }
 
 .unbox-text {
-  max-width: 650px;
-  padding: 0 0 10px;
-  font-size: 15px;
-  margin: auto;
+  max-width: 800px;
+    padding: 0 0 10px;
+    font-size: 25px;
+    margin: auto;
 }
 
 .tablecloth {
@@ -314,9 +320,9 @@ height: 300px;
 }
 
 .tablecloth-text {
-  max-width: 650px;
-  padding: 0 0 10px;
-  font-size: 15px;
+  max-width: 800px;
+  padding: 0 0 30px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -356,7 +362,7 @@ height: 300px;
 .moyenne-text {
   max-width: 650px;
   padding: 0 0 10px;
-  font-size: 15px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -376,7 +382,7 @@ height: 300px;
 .ep-text {
   max-width: 650px;
   padding: 0 0 10px;
-  font-size: 15px;
+  font-size: 25px;
   margin: auto;
 }
 
@@ -403,8 +409,9 @@ height: 300px;
   max-width: 300px
 }
 .painting span {
-  font-size: 20px;
+  font-size: 30px;
   padding-top: 15px;
+  max-width: 300px;
 }
 
 .sale-info {
@@ -416,7 +423,7 @@ height: 300px;
 
 .pubs {
   font-size: 22px;
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     margin-top: 100px;
 }
@@ -426,12 +433,13 @@ height: 300px;
     flex-direction: column;
 }
 .txt-titre {
-  font-size: 30px;
+  font-size: 45px;
   padding-bottom: 40px;
   text-align: center;
 }
 .txt-critiques span {
   padding-bottom: 30px;
+  font-size: 30px;
 }
 
 .publi-num {
@@ -441,14 +449,15 @@ height: 300px;
 }
 
 .publi-titre {
-  font-size: 30px;
+  font-size: 45px;
   padding-bottom: 40px;
   text-align: center;
 }
 .publi-num  span {
   padding-bottom: 30px;
+  font-size: 30px;
 }
-.publi-num span a {
+.publi-num span a , .txt-critiques span a{
   text-decoration: underline;
 }
 
@@ -456,7 +465,7 @@ $offset : -90px;
 $count : 40;
 $duration : 4;
 $titres : #8104bf;
-
+$titresmen: #0a67f7;
 
 @keyframes wave {
   from { transform : translateY(0);  }
@@ -475,7 +484,7 @@ $titres : #8104bf;
 
 
 .wavetext  {
-   margin-top: 160px;
+   margin-top: 65px;
   //   text-align: left;
   //   margin-left: 50px;
 }
@@ -484,7 +493,7 @@ $titres : #8104bf;
 .wavetext span {
   display: inline-block;
   font-family : 'flames';
-  font-size : 100px;
+  font-size : 80px;
   animation-duration: #{$duration}s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -494,7 +503,7 @@ $titres : #8104bf;
 .titre-wave span{
   display: inline-block;
   font-family : "Times New Roman";
-  font-size : 30px;
+  font-size : 50px;
   animation-duration: #{$duration}s;
   animation-name: wavesection;
   animation-iteration-count: infinite;
@@ -503,7 +512,7 @@ $titres : #8104bf;
 .titre2-wave span{
   display: inline-block;
   font-family : "Times New Roman";
-  font-size : 30px;
+  font-size : 50px;
   animation-duration: #{$duration}s;
   animation-name: wavesection;
   animation-iteration-count: infinite;
@@ -512,7 +521,7 @@ $titres : #8104bf;
 .tititre span, .tititre2 span{
   display: inline-block;
   font-family : "Times New Roman";
-  font-size : 20px;
+  font-size : 30px;
   animation-duration: #{$duration}s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
@@ -522,7 +531,7 @@ $titres : #8104bf;
 .titre-hier span , .titre-hier2 span, .titre-hier3 span, .titre-hier4 span{
   display: inline-block;
   font-family : "Times New Roman";
-  font-size : 15px;
+  font-size : 30px;
   animation-duration: #{$duration}s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
@@ -532,7 +541,7 @@ $titres : #8104bf;
 .vieille-fille span, .writing-titre span, .unbox-titre span, .tablecloth-titre span, .moyenne-titre span, .ep-titre span{
   display: inline-block;
   font-family : "Times New Roman";
-  font-size : 20px;
+  font-size : 30px;
   animation-duration: #{$duration}s;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
@@ -663,46 +672,59 @@ $titres : #8104bf;
   .men1 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;
+      color: $titresmen;
       
   }
   .men2 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;
+      color: $titresmen;
   }
   .men3 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;   
+      color: $titresmen;   
   }
   .men4 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;   
+      color: $titresmen;   
   }
   .men5 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;   
+      color: $titresmen;   
   }
   .men6 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;   
+      color: $titresmen; 
   }
   .men7 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color: $titres;   
+      color: $titresmen; 
   }
 }
 
 .doc {
   border-radius: 50% !important;
 }
-
-
+.vacances , .hier{
+  background-image: linear-gradient(
+    to bottom,
+    transparent 50px,
+ 
+    transparent 0);
+margin: auto auto 50px auto;
+}
+.titre-wave, .titre2-wave{
+    position: -webkit-sticky;
+    position: sticky;
+    height: 50px;
+    top: 0;
+    margin: 0;
+}
 
 @media only screen and (max-width: 900px) {
   .eug-header {
