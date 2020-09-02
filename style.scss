@@ -14,11 +14,12 @@ body { margin:0;
 
   button:focus {outline:0;}
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color:  #0000EE;
 }
 a:hover {
   color:  #38a829;
+  text-decoration: underline;
 }
 ul {
   list-style: none;

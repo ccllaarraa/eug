@@ -13,12 +13,13 @@ button:focus {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #0000EE;
 }
 
 a:hover {
   color: #38a829;
+  text-decoration: underline;
 }
 
 ul {
