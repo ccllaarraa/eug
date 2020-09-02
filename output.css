@@ -518,6 +518,7 @@ ul {
 }
 
 .wavetext span {
+  padding: 15px;
   display: inline-block;
   font-family: "flames";
   font-size: 80px;
@@ -5028,6 +5029,25 @@ ul {
   margin: 0;
 }
 
+@media only screen and (max-width: 1024px) {
+  .men1 span, .men2 span, .men3 span, .men4 span, .men5 span, .men6 span, .men7 span,
+.men1.active span,
+.men1:hover span,
+.men2.active span,
+.men2:hover span,
+.men3.active span,
+.men3:hover span,
+.men4.active span,
+.men4:hover span,
+.men5.active span,
+.men5:hover span,
+.men6.active span,
+.men6:hover span,
+.men7.active span,
+.men7:hover span {
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 900px) {
   .eug-header {
     display: flex;
@@ -5038,6 +5058,35 @@ ul {
   .eug-background {
     width: 152%;
     position: fixed;
+  }
+
+  .eug-menu .tab {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eug-menu {
+    margin-top: 0;
+  }
+
+  .tab > * {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .wavetext {
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .wavetext span {
+    font-size: 50px;
+  }
+
+  #publications {
+    margin: 30px;
   }
 }
 
