@@ -50,6 +50,13 @@ var unbox="Some plans to unbox reality";
 var nappe="A crying tablecloth to make reality viewable";
 var moyenne = "Une année moyenne";
 var ep="Des chansons simples sur le sentiment amoureux";
+var men1 = "Works";
+var men2 = "Digital paintings (making salable items)";
+var men3 = "Publications";
+var men4 = "CV";
+var men5 = "Portfolio";
+var men6="E-mail";
+var men7 = "Instagram";
 
 for(var i in text) { 
   if(text[i] === " ") {
@@ -170,5 +177,74 @@ for(var k in ep) {
     $(".ep-titre").append( $("<span>").text(ep[k]) ); 
   }
 }
+
+
+for(var k in men1) { 
+  if(men1[k] === " ") {
+    $(".men1").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men1").append( $("<span>").text(men1[k]) ); 
+  }
+}
+
+
+for(var k in men2) { 
+  if(men2[k] === " ") {
+    $(".men2").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men2").append( $("<span>").text(men2[k]) ); 
+  }
+}
+
+
+for(var k in men3) { 
+  if(men3[k] === " ") {
+    $(".men3").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men3").append( $("<span>").text(men3[k]) ); 
+  }
+}
+
+
+
+for(var k in men4) { 
+  if(men4[k] === " ") {
+    $(".men4").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men4").append( $("<span>").text(men4[k]) ); 
+  }
+}
+
+
+
+for(var k in men5) { 
+  if(men5[k] === " ") {
+    $(".men5").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men5").append( $("<span>").text(men5[k]) ); 
+  }
+}
+
+
+
+for(var k in men6) { 
+  if(men6[k] === " ") {
+    $(".men6").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men6").append( $("<span>").text(men6[k]) ); 
+  }
+}
+
+
+
+for(var k in men7) { 
+  if(men7[k] === " ") {
+    $(".men7").append( $("<span>").html("&nbsp;") ); 
+  } else {  
+    $(".men7").append( $("<span>").text(men7[k]) ); 
+  }
+}
+
+
 
 

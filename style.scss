@@ -122,18 +122,14 @@ ul {
   cursor: pointer;
   /* padding: 14px 16px; */
   transition: 0.3s;
-  border: 1px solid #0a67f7;
-    color: #0a67f7;
-    background-color: white;
-    border-radius: 20px;
+
   }
 
 .tab button:hover {
-  background-color: turquoise;
+ color: turquoise;
 }
 .tab button.active {
-  background-color: turquoise;
-  font-style: bold;
+  color: turquoise;
 }
 
 .titre-projet {
@@ -544,6 +540,16 @@ $titres : #8104bf;
   animation-direction: alternate;
 }
 
+.men1 span, .men2 span,  .men3 span,  .men4 span,  .men5 span,  .men6 span, .men7 span{
+  display: inline-block;
+  font-family : "Times New Roman";
+  font-size : 26px;
+  animation-duration: #{$duration}s;
+  animation-name: wavemiddle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 
 
 @for $i from 0 to $count {
@@ -630,6 +636,42 @@ $titres : #8104bf;
       -#{($count - $i) * 2 * $duration / $count }s;
       color: $titres;
       
+  }
+  .men1 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;
+      
+  }
+  .men2 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;
+  }
+  .men3 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;   
+  }
+  .men4 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;   
+  }
+  .men5 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;   
+  }
+  .men6 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;   
+  }
+  .men7 :nth-child( #{$count}n + #{$i} ) {
+    animation-delay : 
+      -#{($count - $i) * 2 * $duration / $count }s;
+      color: $titres;   
   }
 }
 
