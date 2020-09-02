@@ -8,14 +8,14 @@ body { margin:0;
   // background-size: cover;
   height: 100%;
   overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  color:  rgb(32, 255, 2);
+  font-family: "Times New Roman";
+  color:  #0a67f7;
   ; }
 
   button:focus {outline:0;}
 a {
     text-decoration: none;
-    color:  rgb(32, 255, 2);
+    color:  #0a67f7;
 }
 ul {
   list-style: none;
@@ -33,7 +33,6 @@ ul {
   left: 0;
   position: fixed;
   display: block;
-  //  opacity: 0.7;
   background-color:#00b9e8;
   z-index: 99;
   text-align: center;
@@ -60,10 +59,31 @@ ul {
   overflow: auto;
 }
 
-.eug-background {
-  width: 100%;
-  z-index: -1;
+// .eug-background {
+//   width: 100%;
+//   z-index: -1;
+//   position: absolute;
+ 
+// }
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(3.5);
 }
 
 .eug-header {
@@ -73,10 +93,11 @@ ul {
 }
 
 .eug-menu {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: "Times New Roman";
+  font-size: 25px;
   line-height: 25px;
   width: 100%;
+  margin-top: 35px;
 }
 
 .eug-menu .tab {
@@ -90,7 +111,7 @@ ul {
 }
 
 .tab button {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 18px;
   /* line-height: 25px; */
   /* width: 100%; */
@@ -101,14 +122,17 @@ ul {
   cursor: pointer;
   /* padding: 14px 16px; */
   transition: 0.3s;
-  color: #20ff02;
+  border: 1px solid #0a67f7;
+    color: #0a67f7;
+    background-color: white;
+    border-radius: 20px;
   }
 
 .tab button:hover {
-  text-decoration: underline;
+  background-color: turquoise;
 }
 .tab button.active {
-  text-decoration: underline;
+  background-color: turquoise;
   font-style: bold;
 }
 
@@ -129,12 +153,12 @@ ul {
   display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .vac-vid iframe {
   border-radius: 15px;
-  border: 1px solid rgb(32, 255, 2);
+  border: 1px solid #0a67f7;
 }
 
 .vac-perf {
@@ -148,21 +172,22 @@ ul {
 max-width: 400px;
 margin: 20px;
 border-radius: 20px;
-border: 1px solid  rgb(32, 255, 2);
+border: 1px solid  #0a67f7;
 }
 
 
 .hier-video {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
 }
 
 .hier-vid iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid rgb(32, 255, 2);
-  max-width: 370px;
+  border: 1px solid #0a67f7;
+ 
 }
 
 .hier-vid {
@@ -170,11 +195,12 @@ border: 1px solid  rgb(32, 255, 2);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 .hier-vid-capt {
   max-width: 370px;
     font-size: 12px;
-    color: rgb(32, 255, 2);
+    color: #0a67f7;
 }
 .vieille-fille {
   display: flex;
@@ -186,13 +212,13 @@ border: 1px solid  rgb(32, 255, 2);
   max-width: 400px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #20ff02;
+    border: 1px solid #0a67f7;
 }
 .vieille-fille-img-2 {
   max-height: 300px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #20ff02;
+    border: 1px solid #0a67f7;
 }
 .vieille-images-ctn {
     display: flex;
@@ -230,7 +256,7 @@ font-size: 20px;
   max-width: 400px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .writing-images {
@@ -251,7 +277,7 @@ font-size: 20px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 .unbox-imgs img:nth-child(2) {
 height: 300px;
@@ -282,7 +308,7 @@ height: 300px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .tablecloth-imgs {
@@ -311,7 +337,7 @@ height: 300px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 .moyenne-captures , .moyenne-zoom, .moyenne-space{
   display: flex;
@@ -362,34 +388,99 @@ height: 300px;
 .ep iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid rgb(32, 255, 2);
+  border: 1px solid #0a67f7;
   min-width: 560px;
   min-height: 320px;
 }
+.paintings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
 
+.painting {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 80px 20px;
+}
+.painting img {
+  max-width: 300px
+}
+.painting span {
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.sale-info {
+  font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.pubs {
+  font-size: 22px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+.txt-critiques {
+  padding-bottom: 40px;
+  display: flex;
+    flex-direction: column;
+}
+.txt-titre {
+  font-size: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.txt-critiques span {
+  padding-bottom: 20px;
+}
+
+.publi-num {
+  padding-bottom: 40px;
+  display: flex;
+    flex-direction: column;
+}
+
+.publi-titre {
+  font-size: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.publi-num  span {
+  padding-bottom: 20px;
+}
+.publi-num span a {
+  text-decoration: underline;
+}
 
 $offset : -90px;
 $count : 40;
 $duration : 4;
+$titres : #8104bf;
 
 
 @keyframes wave {
-  from { transform : translateY(0); color: rgb(32, 255, 2); }
-  to   { transform : translateY( $offset ); }
+  from { transform : translateY(0);  }
+  to   { transform : translateY( -80px ); }
 }
 
 @keyframes wavemiddle {
-  from { transform : translateY(0); color:  rgb(32, 255, 2);; }
+  from { transform : translateY(0); ; }
+  to   { transform : translateY( -30px ); }
+}
+@keyframes wavesection {
+  from { transform : translateY(0); ; }
   to   { transform : translateY( -40px ); }
 }
 
-@keyframes wavesmall {
-  from { transform : translateY(0); color:  rgb(32, 255, 2);; }
-  to   { transform : translateY( -20px ); }
-}
+
 
 .wavetext  {
-   margin-top: 130px;
+   margin-top: 200px;
   //   text-align: left;
   //   margin-left: 50px;
 }
@@ -398,7 +489,7 @@ $duration : 4;
 .wavetext span {
   display: inline-block;
   font-family : 'flames';
-  font-size : 65px;
+  font-size : 100px;
   animation-duration: #{$duration}s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -407,45 +498,45 @@ $duration : 4;
 
 .titre-wave span{
   display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
+  font-family : "Times New Roman";
   font-size : 30px;
   animation-duration: #{$duration}s;
-  animation-name: wavemiddle;
+  animation-name: wavesection;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 .titre2-wave span{
   display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
+  font-family : "Times New Roman";
   font-size : 30px;
   animation-duration: #{$duration}s;
-  animation-name: wavemiddle;
+  animation-name: wavesection;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 .tititre span, .tititre2 span{
   display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
+  font-family : "Times New Roman";
   font-size : 20px;
   animation-duration: #{$duration}s;
-  animation-name: wavesmall;
+  animation-name: wavemiddle;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .titre-hier span , .titre-hier2 span, .titre-hier3 span, .titre-hier4 span{
   display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
+  font-family : "Times New Roman";
   font-size : 15px;
   animation-duration: #{$duration}s;
-  animation-name: wavesmall;
+  animation-name: wavemiddle;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .vieille-fille span, .writing-titre span, .unbox-titre span, .tablecloth-titre span, .moyenne-titre span, .ep-titre span{
   display: inline-block;
-  font-family : Arial, Helvetica, sans-serif;
+  font-family : "Times New Roman";
   font-size : 20px;
   animation-duration: #{$duration}s;
   animation-name: wavemiddle;
@@ -460,84 +551,84 @@ $duration : 4;
       animation-delay : 
         -#{($count - $i) * 2 * $duration / $count }s;
       // color: rgba(100+$i * 20 % 155, 10, 10+ $i * 40 % 55, 1000);
-      color:  rgb(32, 255, 2);
+      color:  #38a829;
     
   }
   .titre-wave :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color: $titres;
       
   }
   .tititre :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
   }
   .tititre2 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color: $titres;
   }
   .titre2-wave :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
       
   }
   .titre-hier :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
   }
   .titre-hier2 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
   }
   .titre-hier3 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
   }
   .titre-hier4 :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
   }
   .vieille-fille :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
   }
   .writing-titre :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color: $titres;
       
   }
   .unbox-titre :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
       
   }
   .tablecloth-titre :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
       
   }
   .moyenne-titre :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color:  $titres;
       
   }
   .ep-titre :nth-child( #{$count}n + #{$i} ) {
     animation-delay : 
       -#{($count - $i) * 2 * $duration / $count }s;
-      color:  rgb(32, 255, 2);
+      color: $titres;
       
   }
 }

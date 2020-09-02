@@ -4,8 +4,8 @@ body {
   background-color: #00b9e8;
   height: 100%;
   overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #20ff02;
+  font-family: "Times New Roman";
+  color: #0a67f7;
 }
 
 button:focus {
@@ -14,7 +14,7 @@ button:focus {
 
 a {
   text-decoration: none;
-  color: #20ff02;
+  color: #0a67f7;
 }
 
 ul {
@@ -64,10 +64,27 @@ ul {
   overflow: auto;
 }
 
-.eug-background {
-  width: 100%;
-  z-index: -1;
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(3.5);
 }
 
 .eug-header {
@@ -77,10 +94,11 @@ ul {
 }
 
 .eug-menu {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: "Times New Roman";
+  font-size: 25px;
   line-height: 25px;
   width: 100%;
+  margin-top: 35px;
 }
 
 .eug-menu .tab {
@@ -94,7 +112,7 @@ ul {
 }
 
 .tab button {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 18px;
   /* line-height: 25px; */
   /* width: 100%; */
@@ -105,15 +123,18 @@ ul {
   cursor: pointer;
   /* padding: 14px 16px; */
   transition: 0.3s;
-  color: #20ff02;
+  border: 1px solid #0a67f7;
+  color: #0a67f7;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .tab button:hover {
-  text-decoration: underline;
+  background-color: turquoise;
 }
 
 .tab button.active {
-  text-decoration: underline;
+  background-color: turquoise;
   font-style: bold;
 }
 
@@ -136,12 +157,12 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .vac-vid iframe {
   border-radius: 15px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .vac-perf {
@@ -154,20 +175,20 @@ ul {
   max-width: 400px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .hier-video {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
 }
 
 .hier-vid iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid #20ff02;
-  max-width: 370px;
+  border: 1px solid #0a67f7;
 }
 
 .hier-vid {
@@ -175,12 +196,13 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .hier-vid-capt {
   max-width: 370px;
   font-size: 12px;
-  color: #20ff02;
+  color: #0a67f7;
 }
 
 .vieille-fille {
@@ -193,14 +215,14 @@ ul {
   max-width: 400px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .vieille-fille-img-2 {
   max-height: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .vieille-images-ctn {
@@ -242,7 +264,7 @@ ul {
   max-width: 400px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .writing-images {
@@ -265,7 +287,7 @@ ul {
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .unbox-imgs img:nth-child(2) {
@@ -300,7 +322,7 @@ ul {
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .tablecloth-imgs {
@@ -331,7 +353,7 @@ ul {
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
 }
 
 .moyenne-captures, .moyenne-zoom, .moyenne-space {
@@ -383,46 +405,115 @@ ul {
 .ep iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid #20ff02;
+  border: 1px solid #0a67f7;
   min-width: 560px;
   min-height: 320px;
+}
+
+.paintings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.painting {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 80px 20px;
+}
+
+.painting img {
+  max-width: 300px;
+}
+
+.painting span {
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.sale-info {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.pubs {
+  font-size: 22px;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.txt-critiques {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.txt-titre {
+  font-size: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.txt-critiques span {
+  padding-bottom: 20px;
+}
+
+.publi-num {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.publi-titre {
+  font-size: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.publi-num span {
+  padding-bottom: 20px;
+}
+
+.publi-num span a {
+  text-decoration: underline;
 }
 
 @keyframes wave {
   from {
     transform: translateY(0);
-    color: #20ff02;
   }
   to {
-    transform: translateY(-90px);
+    transform: translateY(-80px);
   }
 }
 @keyframes wavemiddle {
   from {
     transform: translateY(0);
-    color: #20ff02;
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+@keyframes wavesection {
+  from {
+    transform: translateY(0);
   }
   to {
     transform: translateY(-40px);
   }
 }
-@keyframes wavesmall {
-  from {
-    transform: translateY(0);
-    color: #20ff02;
-  }
-  to {
-    transform: translateY(-20px);
-  }
-}
 .wavetext {
-  margin-top: 130px;
+  margin-top: 200px;
 }
 
 .wavetext span {
   display: inline-block;
   font-family: "flames";
-  font-size: 65px;
+  font-size: 100px;
   animation-duration: 4s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -431,47 +522,47 @@ ul {
 
 .titre-wave span {
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 30px;
   animation-duration: 4s;
-  animation-name: wavemiddle;
+  animation-name: wavesection;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .titre2-wave span {
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 30px;
   animation-duration: 4s;
-  animation-name: wavemiddle;
+  animation-name: wavesection;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .tititre span, .tititre2 span {
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 20px;
   animation-duration: 4s;
-  animation-name: wavesmall;
+  animation-name: wavemiddle;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .titre-hier span, .titre-hier2 span, .titre-hier3 span, .titre-hier4 span {
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 15px;
   animation-duration: 4s;
-  animation-name: wavesmall;
+  animation-name: wavemiddle;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .vieille-fille span, .writing-titre span, .unbox-titre span, .tablecloth-titre span, .moyenne-titre span, .ep-titre span {
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman";
   font-size: 20px;
   animation-duration: 4s;
   animation-name: wavemiddle;
@@ -481,3002 +572,3002 @@ ul {
 
 .wavetext :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+0) {
   animation-delay: -8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+1) {
   animation-delay: -7.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+2) {
   animation-delay: -7.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+3) {
   animation-delay: -7.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+4) {
   animation-delay: -7.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+5) {
   animation-delay: -7s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+6) {
   animation-delay: -6.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+7) {
   animation-delay: -6.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+8) {
   animation-delay: -6.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+9) {
   animation-delay: -6.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+10) {
   animation-delay: -6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+11) {
   animation-delay: -5.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+12) {
   animation-delay: -5.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+13) {
   animation-delay: -5.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+14) {
   animation-delay: -5.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+15) {
   animation-delay: -5s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+16) {
   animation-delay: -4.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+17) {
   animation-delay: -4.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+18) {
   animation-delay: -4.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+19) {
   animation-delay: -4.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+20) {
   animation-delay: -4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+21) {
   animation-delay: -3.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+22) {
   animation-delay: -3.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+23) {
   animation-delay: -3.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+24) {
   animation-delay: -3.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+25) {
   animation-delay: -3s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+26) {
   animation-delay: -2.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+27) {
   animation-delay: -2.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+28) {
   animation-delay: -2.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+29) {
   animation-delay: -2.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+30) {
   animation-delay: -2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+31) {
   animation-delay: -1.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+32) {
   animation-delay: -1.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+33) {
   animation-delay: -1.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+34) {
   animation-delay: -1.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+35) {
   animation-delay: -1s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+36) {
   animation-delay: -0.8s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+37) {
   animation-delay: -0.6s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+38) {
   animation-delay: -0.4s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .wavetext :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #38a829;
 }
 
 .titre-wave :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tititre2 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre2-wave :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier2 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier3 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .titre-hier4 :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .vieille-fille :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .writing-titre :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .unbox-titre :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .tablecloth-titre :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .moyenne-titre :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 .ep-titre :nth-child(40n+39) {
   animation-delay: -0.2s;
-  color: #20ff02;
+  color: #8104bf;
 }
 
 @media only screen and (max-width: 900px) {

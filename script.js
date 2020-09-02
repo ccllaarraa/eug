@@ -35,7 +35,7 @@ window.addEventListener("load", function load() {
     }
   
 
-var text = "Eugenie Zely";
+var text = "EUGENIE ZELY";
 var vacstitre1 = "C'est les vacances, 2019-2020";
 var vacsfilm="Un film";
 var vacsperf='Une performance';
