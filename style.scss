@@ -9,13 +9,13 @@ body { margin:0;
   height: 100%;
   overflow: hidden;
   font-family: "Times New Roman";
-  color:  #0a67f7;
+  color:  #0000EE;
   ; }
 
   button:focus {outline:0;}
 a {
     text-decoration: none;
-    color:  #0a67f7;
+    color:  #0000EE;
 }
 a:hover {
   color:  #38a829;
@@ -156,7 +156,7 @@ ul {
 
 .vac-vid iframe {
   border-radius: 15px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #0000EE;
 }
 
 .vac-perf {
@@ -170,7 +170,7 @@ ul {
 max-width: 400px;
 margin: 20px;
 border-radius: 20px;
-border: 1px solid  #0a67f7;
+border: 1px solid  #0000EE;
 }
 
 .caption{
@@ -188,7 +188,7 @@ border: 1px solid  #0a67f7;
 .hier-vid iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #0000EE;
  
 }
 
@@ -202,7 +202,7 @@ border: 1px solid  #0a67f7;
 .hier-vid-capt {
   max-width: 600px;
     font-size: 25px;
-    color: #0a67f7;
+    color: #0000EE;
 }
 .vieille-fille {
   display: flex;
@@ -214,13 +214,13 @@ border: 1px solid  #0a67f7;
   max-width: 400px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #0a67f7;
+    border: 1px solid #0000EE;
 }
 .vieille-fille-img-2 {
   max-height: 300px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #0a67f7;
+    border: 1px solid #0000EE;
 }
 .vieille-images-ctn {
     display: flex;
@@ -257,7 +257,7 @@ border: 1px solid  #0a67f7;
   max-width: 400px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #0000EE;
 }
 
 .writing-images {
@@ -278,7 +278,7 @@ border: 1px solid  #0a67f7;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #0000EE;
 }
 .unbox-imgs img:nth-child(2) {
 height: 300px;
@@ -309,7 +309,7 @@ height: 300px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #0000EE;
 }
 
 .tablecloth-imgs {
@@ -338,7 +338,7 @@ height: 300px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #0000EE;
 }
 .moyenne-captures , .moyenne-zoom, .moyenne-space{
   display: flex;
@@ -389,7 +389,7 @@ height: 300px;
 .ep iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid #0a67f7;
+  border: 1px solid #FF0000;
   min-width: 560px;
   min-height: 320px;
 }
@@ -412,6 +412,7 @@ height: 300px;
   font-size: 30px;
   padding-top: 15px;
   max-width: 300px;
+  color: #FF0000;
 }
 
 .sale-info {
@@ -465,7 +466,7 @@ $offset : -90px;
 $count : 40;
 $duration : 4;
 $titres : #8104bf;
-$titresmen: #0a67f7;
+$titresmen: #0000EE;
 
 @keyframes wave {
   from { transform : translateY(0);  }
