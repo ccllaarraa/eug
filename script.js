@@ -34,8 +34,8 @@ $(document).ready(function(){
 //javascript here
 
 $('body').append(' <div id="loading"><img id="loading-image" src="assets/goutte.png" alt="Loading..." /><img id="loading-image" src="assets/goutte.png" alt="Loading..." /><img id="loading-image" src="assets/goutte.png" alt="Loading..." /></div>');
-$(window).on('load', function(){
-  setTimeout(removeLoader); //wait for page load PLUS one seconds.
+document.addEventListener("DOMContentLoaded", function(event) {
+  setTimeout(removeLoader, 3000); //wait for page load 
 });
 function removeLoader(){
     $( "#loading" ).fadeOut(500, function() {
@@ -47,6 +47,7 @@ function removeLoader(){
 window.addEventListener("load", function load() {
   document.getElementById("defaultOpen").click();
   });
+
   function openTab(evt, tabName) {
       // Declare all variables
       var i, tabcontent, tablinks;
