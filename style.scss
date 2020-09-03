@@ -10,16 +10,19 @@ body { margin:0;
   overflow: hidden;
   font-family: "Times New Roman";
   color:  #0000EE;
+  cursor: url("./assets/goutte-sang.png"), default;
   ; }
 
   button:focus {outline:0;}
 a {
     text-decoration: underline;
     color:  #0000EE;
+    cursor: url("./assets/goutte-sang.png"), default;
 }
 a:hover {
-  color:  #38a829;
+  color:  rgb(32, 255, 2);
   text-decoration: underline;
+  cursor: url("./assets/goutte-sang.png"), default;
 }
 ul {
   list-style: none;
@@ -62,12 +65,12 @@ ul {
   overflow: auto;
 }
 
-// .eug-background {
-//   width: 100%;
-//   z-index: -1;
-//   position: absolute;
- 
-// }
+.eug-background {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+ position: fixed;
+}
 
 .parallax {
   perspective: 1px;
@@ -130,6 +133,7 @@ ul {
 
 .tab button:hover {
  color: turquoise;
+ cursor: url("./assets/goutte-sang.png"), default;
 }
 .tab button.active {
   color: turquoise;
@@ -157,9 +161,14 @@ ul {
 
 .vac-vid iframe {
   border-radius: 15px;
-  border: 1px solid #0000EE;
+  border: 1px solid rgb(32, 255, 2);
 }
-
+iframe:hover {
+  cursor: url("./assets/goutte-sang.png"), default;
+}
+iframe {
+  cursor: url("./assets/goutte-sang.png"), default;
+}
 .vac-perf {
   display: flex;
   flex-direction: column;
@@ -171,7 +180,7 @@ ul {
 max-width: 400px;
 margin: 20px;
 border-radius: 20px;
-border: 1px solid  #0000EE;
+border: 1px solid  rgb(32, 255, 2);
 }
 
 .caption{
@@ -189,7 +198,7 @@ border: 1px solid  #0000EE;
 .hier-vid iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid #0000EE;
+  border: 1px solid rgb(32, 255, 2);
  
 }
 
@@ -215,13 +224,13 @@ border: 1px solid  #0000EE;
   max-width: 400px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #0000EE;
+    border: 1px solid rgb(32, 255, 2);
 }
 .vieille-fille-img-2 {
   max-height: 300px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #0000EE;
+    border: 1px solid rgb(32, 255, 2);
 }
 .vieille-images-ctn {
     display: flex;
@@ -258,7 +267,7 @@ border: 1px solid  #0000EE;
   max-width: 400px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0000EE;
+  border: 1px solid rgb(32, 255, 2);
 }
 
 .writing-images {
@@ -279,7 +288,7 @@ border: 1px solid  #0000EE;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0000EE;
+  border: 1px solid rgb(32, 255, 2);
 }
 .unbox-imgs img:nth-child(2) {
 height: 300px;
@@ -310,7 +319,7 @@ height: 300px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0000EE;
+  border: 1px solid rgb(32, 255, 2);
 }
 
 .tablecloth-imgs {
@@ -339,7 +348,7 @@ height: 300px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid #0000EE;
+  border: 1px solid rgb(32, 255, 2);
 }
 .moyenne-captures , .moyenne-zoom, .moyenne-space{
   display: flex;
@@ -390,7 +399,7 @@ height: 300px;
 .ep iframe {
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid #FF0000;
+  border: 1px solid rgb(32, 255, 2);
   min-width: 560px;
   min-height: 320px;
 }
@@ -583,7 +592,8 @@ $titresmen: #0000EE;
   animation-name: wavemiddle;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  color:  #38a829;
+  color:  rgb(32, 255, 2);
+  cursor: url("./assets/goutte-sang.png"), default;
 }
 
 
@@ -592,7 +602,7 @@ $titresmen: #0000EE;
       animation-delay : 
         -#{($count - $i) * 2 * $duration / $count }s;
       // color: rgba(100+$i * 20 % 155, 10, 10+ $i * 40 % 55, 1000);
-      color:  #38a829;
+      color:  rgb(32, 255, 2);
     
   }
   .titre-wave :nth-child( #{$count}n + #{$i} ) {
