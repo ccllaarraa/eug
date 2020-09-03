@@ -69,7 +69,7 @@ window.addEventListener("load", function load() {
     }
   
 
-var text = "Eugénie Zely";
+var text = "Eugènie Zély";
 var vacstitre1 = "C'est les vacances, 2019-2020";
 var vacsfilm="Un film";
 var vacsperf='Une performance';
@@ -85,7 +85,7 @@ var nappe="A crying tablecloth to make reality viewable";
 var moyenne = "Une année moyenne";
 var ep="Des chansons simples sur le sentiment amoureux";
 var men1 = "Works";
-var men2 = "Digital paintings (making salable items)";
+var men2 = "Digital paintings (Lili Briscoe)";
 var men3 = "Publications";
 var men4 = "CV";
 var men5 = "Portfolio";
