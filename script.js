@@ -1,4 +1,38 @@
-    
+//jquery here    
+
+$(document).ready(function(){
+
+
+  var modalButtons = $('.painting');
+  var modals = $('.modal');
+  
+  
+  $(modalButtons).on('click', function(e) {
+          toggleModals(e)  ;
+          console.log('hi')
+  })
+  
+  function toggleModals(e) {
+    var element = $(e.target);
+    console.log(e)
+   
+  
+    var modalClass = element.attr('data-modal');
+          var modalToOpen = $('.modal-' + modalClass);
+          $(modals).removeClass('open ');
+  
+         $(modalToOpen).addClass('open ');      
+  }
+
+  $('.close').on('click', function(){ 
+    $(modals).removeClass('open')
+  });
+  
+  
+  });
+
+//javascript here
+
 $('body').append(' <div id="loading"><img id="loading-image" src="assets/goutte.png" alt="Loading..." /><img id="loading-image" src="assets/goutte.png" alt="Loading..." /><img id="loading-image" src="assets/goutte.png" alt="Loading..." /></div>');
 $(window).on('load', function(){
   setTimeout(removeLoader); //wait for page load PLUS one seconds.
@@ -244,7 +278,6 @@ for(var k in men7) {
     $(".men7").append( $("<span>").text(men7[k]) ); 
   }
 }
-
 
 
 
