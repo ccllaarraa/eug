@@ -451,6 +451,10 @@ iframe {
   max-width: 300px;
 }
 
+.painting img:hover {
+  border: 1px solid #20ff02;
+}
+
 .painting span {
   font-size: 30px;
   padding-top: 15px;
