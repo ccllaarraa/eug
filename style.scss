@@ -565,7 +565,7 @@ $titresmen: #0000EE;
 
 
 .wavetext span {
-  padding: 15px;
+  padding: 10px;
   display: inline-block;
   font-family : 'flames';
   font-size : 80px;
@@ -820,10 +820,6 @@ margin: auto auto 50px auto;
 {
     font-size : 20px;
   }
-
-
-
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -831,6 +827,7 @@ margin: auto auto 50px auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 110px;
   }
   .eug-background {
     width: 152%;
@@ -838,7 +835,7 @@ margin: auto auto 50px auto;
   }
   .eug-menu .tab {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .eug-menu {
     margin-top: 0;
@@ -847,6 +844,7 @@ margin: auto auto 50px auto;
     display: flex;
     justify-content: center;
     padding: 15px;
+    text-decoration: none;
   }
   .wavetext {
     text-align: center;
@@ -859,4 +857,116 @@ margin: auto auto 50px auto;
   #publications {
     margin: 30px;
   }
+  .modal.open {
+    display: none;
+}
+.painting {
+  width: 100%;
+}
+.painting img {
+  max-width: 100%;
+    height: auto;
+    display: flex;
+    align-self: center;
+}
+.painting span {
+  align-self: center;
+}
+.wavetext span {
+  font-size: 30px;
+}
+.men1 span, .men2 span,  .men3 span,  .men4 span,  .men5 span,  .men6 span, .men7 span, 
+.men1.active span,
+.men1:hover span ,
+.men2.active span,
+.men2:hover span ,
+.men3.active span,
+.men3:hover span ,
+.men4.active span,
+.men4:hover span ,
+.men5.active span,
+.men5:hover span ,
+.men6.active span,
+.men6:hover span ,
+.men7.active span,
+.men7:hover span 
+{
+  font-size : 40px;
+  line-height: 90px;
+}
+#works {
+  padding: 15px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .wavetext span {
+    font-size: 10vw;
+  }
+  .men1 span, .men2 span,  .men3 span,  .men4 span,  .men5 span,  .men6 span, .men7 span, 
+.men1.active span,
+.men1:hover span ,
+.men2.active span,
+.men2:hover span ,
+.men3.active span,
+.men3:hover span ,
+.men4.active span,
+.men4:hover span ,
+.men5.active span,
+.men5:hover span ,
+.men6.active span,
+.men6:hover span ,
+.men7.active span,
+.men7:hover span 
+{
+  font-size : 23px;
+  line-height: 50px;
+}
+.eug-header {
+  margin-bottom: 60px;
+}
+.titre-wave span,.titre2-wave span {
+  font-size: 22px;
+}
+.tititre span, .tititre2 span, .titre-hier span, .titre-hier2 span, .titre-hier3 span, .titre-hier4 span, .vieille-fille span, .writing-titre span, .unbox-titre span, .tablecloth-titre span, .moyenne-titre span, .ep-titre span , .txt-titre, .publi-titre{
+  font-size: 27px;
+}
+.titre-projet {
+  padding: 50px 0px 0;
+}
+.vac-vid iframe , .hier-vid iframe, .ep iframe { 
+  max-width: 90vw;
+  max-height: 30vh;
+}.caption , .hier-vid-capt, .vieille-caption, .unbox-text, .tablecloth-text, .moyenne-text {
+  max-width: inherit;
+  padding: 0 15px;
+  font-size: 18px;
+}.vac-perf img, .vieille-fille-img, 
+.vieille-fille-img-2, .writing-images img, .tablecloth-imgs img , 
+.moyenne-captures img, .moyenne-imgs img, .unbox-imgs img
+{
+  max-width: 88vw;
+}.titre-hier , .titre-hier2, .titre-hier3, .titre-hier4 , .vieille-fille, .writing-titre, .unbox-titre, .tablecloth-titre, .moyenne-titre , .ep-titre{
+  max-width: 89vw;
+}.vacs-content , .hier-vid {
+  margin-bottom: 120px;
+}.vieille-images {
+  flex-direction: column;
+} .vieille-fille {
+  display: block;
+  padding: 0 15px 10px;
+} #works {
+  padding: 0;
+}.vieille-texte {
+  max-width: 89vw;
+  padding: 0;
+  font-size: 20px;
+}.ep iframe {
+  min-width: auto;
+    min-height: auto;
+}.sale-info {
+  font-size: 18px;
+} .txt-critiques span, .publi-num span, .painting span {
+  font-size: 20px;
+}
 }
