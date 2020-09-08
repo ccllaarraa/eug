@@ -81,8 +81,7 @@ ul {
 }
 
 
-.modal-1 img,
-
+.modal-1 img
 {
   max-width: 28vw;
 }
@@ -946,6 +945,7 @@ margin: auto auto 50px auto;
 .moyenne-captures img, .moyenne-imgs img, .unbox-imgs img
 {
   max-width: 88vw;
+  max-height: 300px;
 }.titre-hier , .titre-hier2, .titre-hier3, .titre-hier4 , .vieille-fille, .writing-titre, .unbox-titre, .tablecloth-titre, .moyenne-titre , .ep-titre{
   max-width: 89vw;
 }.vacs-content , .hier-vid {
@@ -968,5 +968,7 @@ margin: auto auto 50px auto;
   font-size: 18px;
 } .txt-critiques span, .publi-num span, .painting span {
   font-size: 20px;
+} .writing-images {
+  flex-direction: column;
 }
 }
